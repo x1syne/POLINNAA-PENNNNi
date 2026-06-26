@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageIntro
         icon={Certificate}
         kicker="О нас"
-        title="Салон Саши и Лизы"
+        title="Команда груминг-салона"
         text="Новый груминг-салон в Павловском Посаде с профессиональным обучением, живым каналом и внимательным подходом к каждому питомцу."
       />
       <EmployeesSection />

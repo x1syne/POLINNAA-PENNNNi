@@ -20,7 +20,7 @@ export function PageIntro({ kicker, title, text, icon: Icon = PawPrint }: PageIn
             {kicker}
           </div>
           <h1 className="section-title max-w-[980px] text-white">{title}</h1>
-          <p className="section-copy max-w-[760px] text-white/72">{text}</p>
+          <p className="section-copy max-w-[760px] text-white/82">{text}</p>
         </div>
       </div>
     </AnimatedSection>
