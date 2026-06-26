@@ -11,8 +11,8 @@ export function OfferSection() {
           <Gift size={19} weight="fill" />
           Предложения
         </div>
-        <h2 className="section-title">Акции можно включать и выключать из данных</h2>
-        <p className="section-copy">Пока используем мягкие вечнозеленые предложения. Исторические акции из Telegram лучше не показывать активными без подтверждения.</p>
+        <h2 className="section-title">Акции и спецпредложения</h2>
+        <p className="section-copy">Подбираем предложения, которые помогают спокойно познакомить питомца с салоном и поддерживать уход между визитами.</p>
       </div>
 
       <div className="grid gap-6 2xl:grid-cols-2">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ChatCircleText } from "@phosphor-icons/react/dist/ssr";
+import { ArrowLeft, Newspaper } from "@phosphor-icons/react/dist/ssr";
 import { PageIntro } from "@/components/pages/PageIntro";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { SiteShell } from "@/components/site/SiteShell";
@@ -38,7 +38,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
 
   return (
     <SiteShell>
-      <PageIntro kicker="Блог" title={post.title} text={post.excerpt} icon={ChatCircleText} />
+      <PageIntro kicker="Блог" title={post.title} text={post.excerpt} icon={Newspaper} />
 
       <article className="section pt-0">
         <div className="grid gap-8 2xl:grid-cols-[0.72fr_1fr]">
@@ -51,10 +51,6 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                 <ArrowLeft size={20} weight="bold" />
                 Все статьи
               </Link>
-              <a className="button-base button-primary" href={post.telegramUrl} target="_blank" rel="noreferrer">
-                Telegram
-                <ArrowRight size={20} weight="bold" />
-              </a>
             </div>
           </div>
 

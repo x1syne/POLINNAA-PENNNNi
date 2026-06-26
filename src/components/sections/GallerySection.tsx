@@ -10,7 +10,7 @@ export function GallerySection() {
           <div className="section-kicker">Работы</div>
           <h2 className="section-title">Реальные гости салона</h2>
         </div>
-        <p className="section-copy m-0 2xl:max-w-[520px]">Фото взяты из канала салона. Для продакшена их уже лучше хранить в WebP/AVIF, а не в PNG.</p>
+        <p className="section-copy m-0 2xl:max-w-[520px]">Показываем работы салона: стрижки, вычес, гигиену и спокойный уход для разных питомцев.</p>
       </div>
       <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-4">
         {site.gallery.map((item, index) => (

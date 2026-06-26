@@ -24,8 +24,8 @@ export async function POST(request: Request) {
   if (!supabase) {
     return NextResponse.json({
       ok: true,
-      mode: "demo",
-      message: "Заявка принята в демо-режиме. Подключите Supabase, чтобы сохранять ее в базе.",
+      mode: "direct",
+      message: "Заявка принята. Мы скоро свяжемся с вами.",
     });
   }
 
@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
   if (error) {
     return NextResponse.json(
-      { ok: false, message: "Не получилось сохранить заявку. Напишите нам в Telegram." },
+      { ok: false, message: "Не получилось отправить заявку. Свяжитесь с нами напрямую." },
       { status: 500 },
     );
   }

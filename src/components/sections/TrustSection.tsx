@@ -8,7 +8,7 @@ export function TrustSection() {
       <div className="mb-9 text-center">
         <div className="section-kicker justify-center">Доверие</div>
         <h2 className="section-title mx-auto">Нас легко проверить</h2>
-        <p className="section-copy mx-auto">Карточка на Яндекс Картах, открытый канал и реальные фото работ помогают человеку принять решение без лишних обещаний.</p>
+        <p className="section-copy mx-auto">Карточка на Яндекс Картах, понятные услуги и реальные фото работ помогают принять решение без лишних обещаний.</p>
       </div>
       <div className="grid gap-5 md:grid-cols-3">
         {site.stats.map((stat) => {

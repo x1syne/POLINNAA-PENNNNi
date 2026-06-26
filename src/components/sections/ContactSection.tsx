@@ -58,7 +58,7 @@ export function ContactSection() {
             </label>
             <label className="grid gap-2 font-black">
               Контакт
-              <input className="min-h-14 rounded-2xl border border-border bg-white px-4 font-bold" name="contact" placeholder="Telegram, VK или телефон" required />
+              <input className="min-h-14 rounded-2xl border border-border bg-white px-4 font-bold" name="contact" placeholder="Телефон, VK или удобный мессенджер" required />
             </label>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
@@ -93,7 +93,7 @@ export function ContactSection() {
         </form>
 
         <div className="grid gap-5">
-          <article className="dark-card rounded-card p-6 md:p-8">
+          <article className="berry-contact-card rounded-card p-6 shadow-strong md:p-8">
             <div className="relative mx-auto mb-6 size-40 overflow-hidden rounded-full bg-white">
               <Image className="h-full w-full object-cover" src="/media/contact-pet.webp" alt="Питомец в салоне" width={320} height={320} />
             </div>
@@ -101,13 +101,13 @@ export function ContactSection() {
             <div className="mt-6 grid gap-3">
               <a className="button-base button-primary" href={site.telegram} target="_blank" rel="noreferrer">
                 <ChatCircleText size={22} weight="fill" />
-                Telegram канала
+                Написать в салон
               </a>
               <a className="button-base bg-white !text-[var(--color-text)]" href={site.managerTelegram} target="_blank" rel="noreferrer">
                 <PaperPlaneTilt size={22} weight="fill" />
                 Написать мастеру
               </a>
-              <a className="button-base bg-white/12 text-white" href={site.maps} target="_blank" rel="noreferrer">
+              <a className="button-base bg-white/14 text-white" href={site.maps} target="_blank" rel="noreferrer">
                 <MapPin size={22} weight="fill" />
                 {site.address}
               </a>

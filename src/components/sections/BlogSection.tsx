@@ -11,7 +11,7 @@ export function BlogSection() {
     <AnimatedSection id="blog">
       <div className="mb-9">
         <div className="section-kicker">Блог</div>
-        <h2 className="section-title">Читать на сайте или в Telegram</h2>
+        <h2 className="section-title">Полезные заметки по уходу</h2>
       </div>
       <div className="grid gap-5 2xl:grid-cols-[0.9fr_1fr]">
         <article className="glass-card overflow-hidden rounded-card">
@@ -28,12 +28,9 @@ export function BlogSection() {
             <p className="mt-4 text-lg font-bold leading-8 text-muted">{featured.excerpt}</p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link className="button-base button-dark" href={`/blog/${featured.slug}`}>
-                Читать на сайте
+                Читать статью
                 <ArrowRight size={19} weight="bold" />
               </Link>
-              <a className="button-base button-muted" href={featured.telegramUrl} target="_blank" rel="noreferrer">
-                Читать в Telegram
-              </a>
             </div>
           </div>
         </article>
@@ -53,7 +50,7 @@ export function BlogSection() {
                   <p className="mt-3 font-bold leading-7 text-muted">{post.excerpt}</p>
                 </div>
                 <Link className="mt-6 inline-flex items-center gap-2 font-black text-accent-strong" href={`/blog/${post.slug}`}>
-                  Читать на сайте
+                  Читать статью
                   <ArrowRight size={19} weight="bold" />
                 </Link>
               </div>

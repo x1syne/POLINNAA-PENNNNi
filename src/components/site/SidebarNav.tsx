@@ -33,9 +33,9 @@ export function SidebarNav() {
           <MapPin size={20} weight="fill" />
           {site.address}
         </a>
-        <a className="button-base button-muted w-full" href={site.telegram} target="_blank" rel="noreferrer">
-          Telegram
-        </a>
+        <div className="button-base button-muted w-full cursor-default">
+          {site.city}
+        </div>
         <Link className="button-base button-dark w-full" href="/contacts">
           Записаться
         </Link>

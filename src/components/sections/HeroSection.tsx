@@ -1,15 +1,20 @@
 import Link from "next/link";
-import { ArrowRight, ChatCircleText, PawPrint } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, PawPrint } from "@phosphor-icons/react/dist/ssr";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
+import { HeroStories } from "@/components/sections/HeroStories";
 import { site } from "@/data/site";
 
 export function HeroSection() {
   return (
     <AnimatedSection className="section-tight" id="top">
       <span className="blob-line left-[36%] top-8 hidden lg:block" />
-      <div className="grid min-h-[calc(100dvh-110px)] items-center gap-9 xl:grid-cols-[0.92fr_0.82fr]">
+      <div className="grid items-start gap-7 lg:min-h-[calc(100dvh-110px)] lg:items-center xl:grid-cols-[0.92fr_0.82fr]">
         <div>
+          <div className="mb-4 lg:hidden">
+            <HeroStories slides={site.hero.slides} />
+          </div>
+
           <div className="section-kicker">
             <PawPrint size={19} weight="fill" />
             {site.hero.eyebrow}
@@ -22,18 +27,17 @@ export function HeroSection() {
               Записать питомца
               <ArrowRight size={22} weight="bold" />
             </Link>
-            <a className="button-base button-muted" href={site.telegram} target="_blank" rel="noreferrer">
-              <ChatCircleText size={22} weight="fill" />
-              Написать в Telegram
-            </a>
+            <Link className="button-base button-muted" href="/services">
+              Посмотреть услуги
+            </Link>
           </div>
 
-          <div className="mt-10 grid max-w-[760px] gap-3 sm:grid-cols-3">
+          <div className="mt-8 flex max-w-full gap-3 overflow-x-auto pb-2 sm:grid sm:max-w-[760px] sm:grid-cols-3 sm:overflow-visible sm:pb-0 lg:mt-10">
             {site.serviceKinds.map((item) => {
               const Icon = item.icon;
               return (
-                <div className="rounded-panel bg-white/80 p-4 shadow-soft" key={item.label}>
-                  <Icon className="mb-3 text-accent" size={27} weight="fill" />
+                <div className="flex min-w-[142px] shrink-0 items-center gap-3 rounded-2xl bg-white/82 px-4 py-3 shadow-soft sm:block sm:min-w-0 sm:rounded-panel sm:p-4" key={item.label}>
+                  <Icon className="text-accent sm:mb-3" size={27} weight="fill" />
                   <div className="font-black">{item.label}</div>
                 </div>
               );
@@ -41,7 +45,9 @@ export function HeroSection() {
           </div>
         </div>
 
-        <HeroCarousel slides={site.hero.slides} />
+        <div className="hidden lg:block">
+          <HeroCarousel slides={site.hero.slides} />
+        </div>
       </div>
     </AnimatedSection>
   );
