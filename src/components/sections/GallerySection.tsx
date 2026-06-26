@@ -12,21 +12,21 @@ export function GallerySection() {
         </div>
         <p className="section-copy m-0 2xl:max-w-[520px]">Показываем работы салона: стрижки, вычес, гигиену и спокойный уход для разных питомцев.</p>
       </div>
-      <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 md:gap-4 2xl:grid-cols-4">
         {site.gallery.map((item, index) => (
-          <article className="group overflow-hidden rounded-card bg-white shadow-soft" key={item.src}>
+          <article className="group overflow-hidden rounded-[24px] bg-white shadow-soft md:rounded-card" key={item.src}>
             <div className="relative aspect-[4/5]">
               <Image
                 className="image-fill transition duration-500 group-hover:scale-[1.04]"
                 src={item.src}
                 alt={item.alt}
                 fill
-                sizes="(min-width: 1280px) 22vw, (min-width: 768px) 45vw, 100vw"
+                sizes="(min-width: 1536px) 22vw, (min-width: 768px) 45vw, 46vw"
               />
             </div>
-            <div className="flex items-center justify-between px-5 py-4">
-              <span className="font-black">{item.label}</span>
-              <span className="rounded-full bg-accent-soft px-3 py-1 text-sm font-black text-accent-strong">0{index + 1}</span>
+            <div className="flex items-center justify-between gap-2 px-3 py-3 md:px-5 md:py-4">
+              <span className="truncate text-sm font-black md:text-base">{item.label}</span>
+              <span className="shrink-0 rounded-full bg-accent-soft px-2.5 py-1 text-xs font-black text-accent-strong md:px-3 md:text-sm">0{index + 1}</span>
             </div>
           </article>
         ))}

@@ -30,7 +30,23 @@ export default function CatsPage() {
 
   return (
     <SiteShell>
-      <ServicesSection initialId="cat" title="Уход для кошек" serviceIds={["cat", "maine-coon", "british-cat", "persian-cat"]} />
+      <ServicesSection
+        initialId="cat"
+        title="Уход для кошек"
+        serviceIds={[
+          "cat",
+          "maine-coon",
+          "british-cat",
+          "persian-cat",
+          "scottish-fold",
+          "sphynx-cat",
+          "bengal-cat",
+          "ragdoll-cat",
+          "siberian-cat",
+          "russian-blue-cat",
+          "abyssinian-cat",
+        ]}
+      />
       <FeatureSection id="cats" title="Кошке должно быть спокойно" features={catFeatures} />
       <ContactSection />
     </SiteShell>

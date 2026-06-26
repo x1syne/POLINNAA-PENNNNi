@@ -9,8 +9,8 @@ export function HeroSection() {
   return (
     <AnimatedSection className="section-tight" id="top">
       <span className="blob-line left-[36%] top-8 hidden lg:block" />
-      <div className="grid items-start gap-7 lg:min-h-[calc(100dvh-110px)] lg:items-center xl:grid-cols-[0.92fr_0.82fr]">
-        <div>
+      <div className="grid min-w-0 items-start gap-7 lg:min-h-[calc(100dvh-110px)] lg:items-center xl:grid-cols-[minmax(0,0.92fr)_minmax(0,0.82fr)]">
+        <div className="min-w-0">
           <div className="mb-4 lg:hidden">
             <HeroStories slides={site.hero.slides} />
           </div>
@@ -19,10 +19,10 @@ export function HeroSection() {
             <PawPrint size={19} weight="fill" />
             {site.hero.eyebrow}
           </div>
-          <h1 className="section-title max-w-[920px]">{site.hero.title}</h1>
-          <p className="section-copy max-w-[700px]">{site.hero.text}</p>
+          <h1 className="section-title w-full max-w-[920px]">{site.hero.title}</h1>
+          <p className="section-copy w-full max-w-[700px]">{site.hero.text}</p>
 
-          <div className="mt-9 flex flex-wrap gap-4">
+          <div className="hero-actions mt-9 flex min-w-0 flex-wrap gap-4">
             <Link className="button-base button-primary" href="/contacts">
               Записать питомца
               <ArrowRight size={22} weight="bold" />

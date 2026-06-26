@@ -54,6 +54,13 @@ const breedSizeById: Record<string, BreedSize> = {
   "maine-coon": "cats",
   "british-cat": "cats",
   "persian-cat": "cats",
+  "scottish-fold": "cats",
+  "sphynx-cat": "cats",
+  "bengal-cat": "cats",
+  "ragdoll-cat": "cats",
+  "siberian-cat": "cats",
+  "russian-blue-cat": "cats",
+  "abyssinian-cat": "cats",
 };
 
 const filterLabels: Record<BreedSize, string> = {
