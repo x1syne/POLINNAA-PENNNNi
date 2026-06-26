@@ -63,6 +63,12 @@ export const site = {
     title: "Груминг без спешки и стресса",
     text: "Стрижки, гигиена, мытье, экспресс-линька и уход для собак и кошек. Работаем аккуратно, смотрим на реакцию питомца и подбираем темп под его характер.",
     image: "/media/hero-dog.webp",
+    slides: [
+      { src: "/media/hero-dog.webp", alt: "Шпиц после ухода в груминг-салоне", label: "Шпиц" },
+      { src: "/media/service-york.webp", alt: "Йоркширский терьер после стрижки", label: "Йорк" },
+      { src: "/media/service-cat.webp", alt: "Кошка в руках мастера", label: "Кошка" },
+      { src: "/media/gallery-spaniel-after.webp", alt: "Спаниель после стрижки", label: "Спаниель" },
+    ],
     imageAlt: "Шпиц после ухода в груминг-салоне",
     metric: "Салон открыт в 2026 году",
   },

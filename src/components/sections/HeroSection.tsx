@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChatCircleText, PawPrint } from "@phosphor-icons/react/dist/ssr";
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
+import { HeroCarousel } from "@/components/sections/HeroCarousel";
 import { site } from "@/data/site";
 
 export function HeroSection() {
@@ -41,26 +41,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="relative overflow-hidden rounded-card bg-accent-soft shadow-strong">
-            <Image
-              className="image-fill aspect-[4/5] min-h-[520px]"
-              src={site.hero.image}
-              alt={site.hero.imageAlt}
-              width={980}
-              height={1180}
-              priority
-            />
-            <div className="absolute inset-x-5 bottom-5 rounded-[24px] bg-white/86 p-5 shadow-soft backdrop-blur-xl">
-              <div className="text-sm font-black uppercase text-accent-strong">Адрес</div>
-              <div className="mt-1 text-xl font-black">{site.address}</div>
-              <div className="text-muted">{site.city}</div>
-            </div>
-          </div>
-          <div className="absolute -right-3 -top-4 rounded-pill bg-surface-strong px-5 py-3 text-sm font-black text-white shadow-strong">
-            {site.hero.metric}
-          </div>
-        </div>
+        <HeroCarousel slides={site.hero.slides} />
       </div>
     </AnimatedSection>
   );

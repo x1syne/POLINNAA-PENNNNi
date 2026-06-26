@@ -16,8 +16,8 @@
   --palette-gray-300: #d8d1da;
   --palette-green-500: #54cc84;
 
-  --color-page: var(--palette-white);
-  --color-page-soft: var(--palette-milk);
+  --color-page: #fffdfd;
+  --color-page-soft: #fff4fa;
   --color-surface: #ffffff;
   --color-surface-strong: var(--palette-ink-950);
   --color-panel: rgba(255, 255, 255, 0.86);
@@ -83,9 +83,9 @@ body {
   margin: 0;
   min-height: 100dvh;
   background:
-    radial-gradient(circle at 86% 9%, rgba(255, 63, 147, 0.18), transparent 28rem),
-    radial-gradient(circle at 18% 25%, rgba(242, 15, 104, 0.12), transparent 24rem),
-    linear-gradient(180deg, var(--color-page), var(--color-page-soft) 72%, var(--color-page));
+    radial-gradient(circle at 84% 7%, rgba(255, 63, 147, 0.12), transparent 26rem),
+    radial-gradient(circle at 12% 38%, rgba(242, 15, 104, 0.07), transparent 23rem),
+    linear-gradient(180deg, #ffffff 0%, var(--color-page) 30%, var(--color-page-soft) 68%, #ffffff 100%);
   color: var(--color-text);
   font-family: var(--font-body), system-ui, sans-serif;
   text-rendering: geometricPrecision;
