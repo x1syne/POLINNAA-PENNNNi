@@ -18,7 +18,7 @@ export function HeroSection() {
           <p className="section-copy max-w-[700px]">{site.hero.text}</p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <Link className="button-base button-primary" href="#contacts">
+            <Link className="button-base button-primary" href="/contacts">
               Записать питомца
               <ArrowRight size={22} weight="bold" />
             </Link>

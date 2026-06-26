@@ -1,15 +1,27 @@
 import { AnimatedSection } from "@/components/motion/AnimatedSection";
-import { site } from "@/data/site";
+import { site, type Feature } from "@/data/site";
 
-export function FeatureSection() {
+type FeatureSectionProps = {
+  id?: string;
+  kicker?: string;
+  title?: string;
+  features?: Feature[];
+};
+
+export function FeatureSection({
+  id = "dogs",
+  kicker = "Подход",
+  title = "Забота, которую питомец выдерживает спокойно",
+  features = site.features,
+}: FeatureSectionProps) {
   return (
-    <AnimatedSection id="dogs">
+    <AnimatedSection id={id}>
       <div className="mb-10">
-        <div className="section-kicker">Подход</div>
-        <h2 className="section-title">Забота, которую питомец выдерживает спокойно</h2>
+        <div className="section-kicker">{kicker}</div>
+        <h2 className="section-title">{title}</h2>
       </div>
       <div className="grid gap-5 md:grid-cols-3">
-        {site.features.map((feature) => {
+        {features.map((feature) => {
           const Icon = feature.icon;
           return (
             <article className="glass-card rounded-card p-6 md:p-8" key={feature.title}>

@@ -42,6 +42,8 @@
   --content-max: 1540px;
   --sidebar-width: 302px;
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --font-body: "Trebuchet MS", "Arial Rounded MT Bold", Arial, sans-serif;
+  --font-display: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
 }
 
 @theme inline {
@@ -272,6 +274,17 @@ textarea {
 
   .page-main {
     padding-bottom: 86px;
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1439px) {
+  :root {
+    --sidebar-width: 264px;
+  }
+
+  .shell-grid {
+    gap: 2rem;
+    width: min(var(--content-max), calc(100% - 40px));
   }
 }
 

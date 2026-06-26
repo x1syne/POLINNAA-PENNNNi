@@ -2,7 +2,10 @@ import type { Icon } from "@phosphor-icons/react";
 import {
   Cat,
   ChatCircleText,
+  Certificate,
+  CalendarCheck,
   Dog,
+  Heart,
   MapPin,
   PawPrint,
   Scissors,
@@ -36,6 +39,7 @@ export type StatCard = {
   label: string;
   value: string;
   detail: string;
+  icon: Icon;
 };
 
 export type Feature = {
@@ -63,13 +67,13 @@ export const site = {
     metric: "Салон открыт в 2026 году",
   },
   nav: [
-    { label: "Собаки", href: "#dogs" },
-    { label: "Кошки", href: "#cats" },
-    { label: "Услуги", href: "#services" },
-    { label: "Работы", href: "#works" },
-    { label: "О нас", href: "#about" },
-    { label: "Блог", href: "#blog" },
-    { label: "Контакты", href: "#contacts" },
+    { label: "Собаки", href: "/dogs" },
+    { label: "Кошки", href: "/cats" },
+    { label: "Услуги", href: "/services" },
+    { label: "Работы", href: "/works" },
+    { label: "О нас", href: "/about" },
+    { label: "Блог", href: "/blog" },
+    { label: "Контакты", href: "/contacts" },
   ] satisfies NavItem[],
   services: [
     {
@@ -197,10 +201,34 @@ export const site = {
     },
   ],
   stats: [
-    { label: "Яндекс Карты", value: "Открыто", detail: "карточка салона" },
-    { label: "Подход", value: "1:1", detail: "без потока и суеты" },
-    { label: "Мастера", value: "2", detail: "Саша и Лиза" },
+    { label: "Яндекс Карты", value: "Открыто", detail: "карточка салона", icon: MapPin },
+    { label: "Подход", value: "1:1", detail: "без потока и суеты", icon: Heart },
+    { label: "Мастера", value: "2", detail: "Саша и Лиза", icon: Certificate },
   ] satisfies StatCard[],
+  employees: [
+    {
+      name: "Саша",
+      role: "Сертифицированный грумер",
+      image: "/media/employee-sasha.webp",
+      alt: "Грумер Саша",
+      text: "Отвечает за аккуратные силуэты, спокойный темп процедуры и понятные рекомендации владельцам.",
+      badge: "Александра",
+    },
+    {
+      name: "Лиза",
+      role: "Сертифицированный грумер",
+      image: "/media/employee-liza.webp",
+      alt: "Грумер Лиза",
+      text: "Работает с гигиеной, вычесом и питомцами, которым важно мягкое знакомство с салоном.",
+      badge: "Елизавета",
+    },
+  ],
+  proof: {
+    title: "Обучение и сертификаты",
+    text: "Команда прошла обучение в академии груминга. Это усиливает доверие к новому салону и показывает профессиональную базу.",
+    image: "/media/team-certificates.webp",
+    icon: CalendarCheck,
+  },
   quickActions: [
     { label: "Telegram", href: "https://t.me/groomsalooon", icon: ChatCircleText },
     { label: "VK", href: "https://vk.ru/club236847987", icon: Star },

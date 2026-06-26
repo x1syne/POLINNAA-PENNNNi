@@ -49,7 +49,7 @@ export function ContactSection() {
         <h2 className="section-title">Записаться на услугу</h2>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-[1fr_0.86fr]">
+      <div className="grid gap-6 2xl:grid-cols-[1fr_0.86fr]">
         <form className="glass-card grid gap-4 rounded-card p-6 md:p-8" onSubmit={handleSubmit}>
           <div className="grid gap-4 md:grid-cols-2">
             <label className="grid gap-2 font-black">
@@ -94,8 +94,8 @@ export function ContactSection() {
 
         <div className="grid gap-5">
           <article className="dark-card rounded-card p-6 md:p-8">
-            <div className="relative mb-6 overflow-hidden rounded-full bg-white">
-              <Image className="mx-auto aspect-square w-40 object-cover" src="/media/contact-pet.webp" alt="Питомец в салоне" width={320} height={320} />
+            <div className="relative mx-auto mb-6 size-40 overflow-hidden rounded-full bg-white">
+              <Image className="h-full w-full object-cover" src="/media/contact-pet.webp" alt="Питомец в салоне" width={320} height={320} />
             </div>
             <h3 className="text-4xl font-black leading-tight">Можно написать напрямую</h3>
             <div className="mt-6 grid gap-3">
@@ -103,7 +103,7 @@ export function ContactSection() {
                 <ChatCircleText size={22} weight="fill" />
                 Telegram канала
               </a>
-              <a className="button-base bg-white text-text" href={site.managerTelegram} target="_blank" rel="noreferrer">
+              <a className="button-base bg-white !text-[var(--color-text)]" href={site.managerTelegram} target="_blank" rel="noreferrer">
                 <PaperPlaneTilt size={22} weight="fill" />
                 Написать мастеру
               </a>

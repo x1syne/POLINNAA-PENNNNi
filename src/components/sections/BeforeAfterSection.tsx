@@ -15,7 +15,7 @@ export function BeforeAfterSection() {
         <p className="section-copy">Ползунок можно двигать. Блок сделан отдельным компонентом, чтобы потом быстро добавлять новые пары работ.</p>
       </div>
 
-      <div className="grid items-center gap-8 xl:grid-cols-[1fr_0.72fr]">
+      <div className="grid items-center gap-8 2xl:grid-cols-[1fr_0.72fr]">
         <div className="relative overflow-hidden rounded-card bg-white shadow-strong">
           <div className="relative aspect-[4/5] min-h-[520px]">
             <Image className="image-fill" src="/media/gallery-spaniel-before.webp" alt="Спаниель до груминга" fill sizes="(min-width: 1280px) 56vw, 100vw" />

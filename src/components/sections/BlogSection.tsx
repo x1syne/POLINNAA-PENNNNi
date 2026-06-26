@@ -12,7 +12,7 @@ export function BlogSection() {
         <div className="section-kicker">Блог</div>
         <h2 className="section-title">Полезные заметки из канала</h2>
       </div>
-      <div className="grid gap-5 xl:grid-cols-[0.9fr_1fr]">
+      <div className="grid gap-5 2xl:grid-cols-[0.9fr_1fr]">
         <article className="glass-card overflow-hidden rounded-card">
           <div className="relative aspect-[16/11]">
             <Image className="image-fill" src={featured.image} alt={featured.alt} fill sizes="(min-width: 1280px) 42vw, 100vw" />

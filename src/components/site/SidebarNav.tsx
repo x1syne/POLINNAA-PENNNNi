@@ -4,8 +4,11 @@ import { site } from "@/data/site";
 
 export function SidebarNav() {
   return (
-    <aside className="sticky top-8 hidden h-[calc(100dvh-64px)] flex-col rounded-nav border border-border bg-panel p-5 shadow-soft backdrop-blur-xl lg:flex">
-      <Link className="mb-8 flex items-center gap-3 px-3 text-[2.55rem] font-black leading-none tracking-normal" href="#top">
+    <aside
+      className="sticky top-8 hidden h-[calc(100dvh-64px)] flex-col rounded-nav border border-border bg-panel p-5 shadow-soft backdrop-blur-xl lg:flex"
+      aria-label="Навигация по сайту"
+    >
+      <Link className="mb-8 flex items-center gap-3 px-3 text-[2.55rem] font-black leading-none tracking-normal" href="/">
         <span className="grid size-12 place-items-center rounded-full bg-accent text-white">
           <PawPrint size={27} weight="fill" />
         </span>
@@ -33,9 +36,9 @@ export function SidebarNav() {
         <a className="button-base button-muted w-full" href={site.telegram} target="_blank" rel="noreferrer">
           Telegram
         </a>
-        <a className="button-base button-dark w-full" href="#contacts">
+        <Link className="button-base button-dark w-full" href="/contacts">
           Записаться
-        </a>
+        </Link>
       </div>
     </aside>
   );

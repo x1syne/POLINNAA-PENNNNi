@@ -1,12 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
-
-const nunito = Nunito_Sans({
-  subsets: ["cyrillic", "latin"],
-  variable: "--font-body",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Grooming Salon - груминг в Павловском Посаде",
@@ -22,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={nunito.variable}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

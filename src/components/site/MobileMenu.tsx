@@ -12,7 +12,7 @@ export function MobileMenu() {
   return (
     <>
       <header className="sticky top-3 z-50 mx-auto mb-4 flex w-[calc(100%-28px)] items-center justify-between rounded-pill border border-border bg-white/88 px-3 py-2 shadow-soft backdrop-blur-xl lg:hidden">
-        <Link className="flex items-center gap-2 text-xl font-black" href="#top">
+        <Link className="flex items-center gap-2 text-xl font-black" href="/">
           <span className="grid size-10 place-items-center rounded-full bg-accent text-white">
             <PawPrint size={22} weight="fill" />
           </span>

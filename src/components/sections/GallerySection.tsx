@@ -5,14 +5,14 @@ import { site } from "@/data/site";
 export function GallerySection() {
   return (
     <AnimatedSection id="cats">
-      <div className="mb-9 flex flex-col justify-between gap-6 xl:flex-row xl:items-end">
+      <div className="mb-9 flex flex-col justify-between gap-6 2xl:flex-row 2xl:items-end">
         <div>
           <div className="section-kicker">Работы</div>
           <h2 className="section-title">Реальные гости салона</h2>
         </div>
-        <p className="section-copy m-0 xl:max-w-[520px]">Фото взяты из канала салона. Для продакшена их уже лучше хранить в WebP/AVIF, а не в PNG.</p>
+        <p className="section-copy m-0 2xl:max-w-[520px]">Фото взяты из канала салона. Для продакшена их уже лучше хранить в WebP/AVIF, а не в PNG.</p>
       </div>
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-4">
         {site.gallery.map((item, index) => (
           <article className="group overflow-hidden rounded-card bg-white shadow-soft" key={item.src}>
             <div className="relative aspect-[4/5]">

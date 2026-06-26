@@ -1,6 +1,7 @@
 import { BlogSection } from "@/components/sections/BlogSection";
 import { BeforeAfterSection } from "@/components/sections/BeforeAfterSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { EmployeesSection } from "@/components/sections/EmployeesSection";
 import { FeatureSection } from "@/components/sections/FeatureSection";
 import { GallerySection } from "@/components/sections/GallerySection";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -18,6 +19,7 @@ export default function Home() {
       <GallerySection />
       <OfferSection />
       <BeforeAfterSection />
+      <EmployeesSection />
       <TrustSection />
       <BlogSection />
       <ContactSection />

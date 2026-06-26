@@ -15,14 +15,14 @@ export function OfferSection() {
         <p className="section-copy">Пока используем мягкие вечнозеленые предложения. Исторические акции из Telegram лучше не показывать активными без подтверждения.</p>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-2">
+      <div className="grid gap-6 2xl:grid-cols-2">
         <article className="dark-card rounded-card p-6 md:p-8">
           <div className="relative mb-7 overflow-hidden rounded-panel bg-white/10">
             <Image className="image-fill aspect-[16/10]" src="/media/promo-loyalty.webp" alt="Акция и забота о питомцах" width={1000} height={720} />
           </div>
           <h3 className="text-4xl font-black leading-tight md:text-5xl">Первый визит без тревоги</h3>
           <p className="mt-4 text-lg font-bold leading-8 text-white/72">Знакомим питомца со столом, феном и руками мастера в комфортном темпе. Подходит щенкам, котятам и осторожным взрослым животным.</p>
-          <Link className="button-base button-primary mt-7" href="#contacts">
+          <Link className="button-base button-primary mt-7" href="/contacts">
             Обсудить визит
             <ArrowRight size={22} weight="bold" />
           </Link>
@@ -37,7 +37,7 @@ export function OfferSection() {
               <h3 className="text-4xl font-black leading-tight md:text-5xl">Поддерживающий уход между стрижками</h3>
               <p className="mt-4 text-lg font-bold leading-8 text-muted">Помогаем не доводить шерсть до колтунов: вычес, когти, уши, глаза и рекомендации по домашнему уходу.</p>
             </div>
-            <Link className="button-base button-dark mt-7" href="#services">
+            <Link className="button-base button-dark mt-7" href="/services">
               Смотреть услуги
               <ArrowRight size={22} weight="bold" />
             </Link>

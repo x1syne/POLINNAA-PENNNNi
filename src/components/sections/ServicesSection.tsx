@@ -8,9 +8,15 @@ import type { ServiceGroup } from "@/data/site";
 import { site } from "@/data/site";
 import { cn } from "@/lib/cn";
 
-export function ServicesSection() {
-  const [activeId, setActiveId] = useState(site.services[0]?.id ?? "");
-  const active = site.services.find((service) => service.id === activeId) ?? site.services[0];
+type ServicesSectionProps = {
+  initialId?: string;
+  serviceIds?: string[];
+};
+
+export function ServicesSection({ initialId, serviceIds }: ServicesSectionProps) {
+  const services = serviceIds ? site.services.filter((service) => serviceIds.includes(service.id)) : site.services;
+  const [activeId, setActiveId] = useState(initialId ?? services[0]?.id ?? "");
+  const active = services.find((service) => service.id === activeId) ?? services[0];
 
   return (
     <section className="section" id="services">
@@ -21,7 +27,7 @@ export function ServicesSection() {
       </div>
 
       <div className="flex gap-2 overflow-x-auto rounded-pill bg-white p-2 shadow-soft" role="tablist" aria-label="Выбор типа услуги">
-        {site.services.map((service) => (
+        {services.map((service) => (
           <button
             className={cn(
               "min-h-14 shrink-0 rounded-pill px-7 text-lg font-black text-muted transition",
@@ -38,24 +44,24 @@ export function ServicesSection() {
         ))}
       </div>
 
-      <ServiceDetails active={active} />
+      {active ? <ServiceDetails active={active} /> : null}
     </section>
   );
 }
 
 function ServiceDetails({ active }: { active: ServiceGroup }) {
   return (
-    <div className="mt-8 grid gap-8 xl:grid-cols-[0.86fr_1fr]">
+    <div className="mt-8 grid gap-8 2xl:grid-cols-[0.86fr_1fr]">
       <div>
         <div className="relative overflow-hidden rounded-card bg-accent-soft shadow-soft">
           <Image className="image-fill aspect-[4/5] max-h-[660px]" src={active.image} alt={active.imageAlt} width={900} height={1120} />
         </div>
         <div className="mt-5 grid gap-3 sm:grid-cols-[1fr_1.2fr]">
-          <Link className="button-base button-muted" href="#works">
+          <Link className="button-base button-muted" href="/works">
             Посмотреть работы
             <ArrowRight size={21} weight="bold" />
           </Link>
-          <Link className="button-base button-primary" href="#contacts">
+          <Link className="button-base button-primary" href="/contacts">
             Записать питомца
             <PawPrint size={22} weight="fill" />
           </Link>
